@@ -1,0 +1,128 @@
+PS C:\Users\acer4\github\esercizi_git> git branch
+* master
+PS C:\Users\acer4\github\esercizi_git> git branch stile
+PS C:\Users\acer4\github\esercizi_git> git checkout stile
+Switched to branch 'stile'
+PS C:\Users\acer4\github\esercizi_git> git branch
+  master
+* stile
+PS C:\Users\acer4\github\esercizi_git> touch stile.css
+touch : Termine 'touch' non riconosciuto come nome di cmdlet,
+funzione, programma eseguibile o file script. Controllare
+l'ortografia del nome o verificare che il percorso sia incluso e       
+corretto, quindi riprovare.
+In riga:1 car:1
++ touch stile.css
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], Comm  
+   andNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\acer4\github\esercizi_git> touch stile.css
+touch : Termine 'touch' non riconosciuto come nome di cmdlet, 
+funzione, programma eseguibile o file script. Controllare 
+l'ortografia del nome o verificare che il percorso sia incluso e 
+corretto, quindi riprovare.
+In riga:1 car:1
++ touch stile.css
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], Comm 
+   andNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\acer4\github\esercizi_git> git add . 
+PS C:\Users\acer4\github\esercizi_git> git add style.css
+PS C:\Users\acer4\github\esercizi_git> git commit -m "file CSS style.css" 
+[stile c7eb236] file CSS style.css
+ 2 files changed, 3 insertions(+)
+ create mode 100644 stile.css
+ create mode 100644 style.css
+PS C:\Users\acer4\github\esercizi_git> git log
+commit c7eb23674f69ed47e78d6a42762a2edf656ff8af (HEAD -> stile)
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Thu Oct 31 00:33:51 2024 +0100
+
+    file CSS style.css
+
+commit ef57f69d97c42bcbfb5cb6d24de75b03975823ec (master)
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Wed Oct 30 23:55:29 2024 +0100
+
+    nuova commit
+PS C:\Users\acer4\github\esercizi_git> git add index.html
+PS C:\Users\acer4\github\esercizi_git> git commit -m "importo lo style.css in index.html"
+[stile 8d6a06c] importo lo style.css in index.html
+ 1 file changed, 1 insertion(+)
+PS C:\Users\acer4\github\esercizi_git> git log
+commit 8d6a06ca7542cd40bfe4ed636b36a2f4c2c89b22 (HEAD -> stile)
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Thu Oct 31 00:37:17 2024 +0100
+    importo lo style.css in index.html
+
+commit c7eb23674f69ed47e78d6a42762a2edf656ff8af
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Thu Oct 31 00:33:51 2024 +0100
+
+    file CSS style.css
+
+commit ef57f69d97c42bcbfb5cb6d24de75b03975823ec (master)
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Wed Oct 30 23:55:29 2024 +0100
+
+    nuova commit
+PS C:\Users\acer4\github\esercizi_git> git add index.html
+PS C:\Users\acer4\github\esercizi_git> git commit -m "importo lo style.css in index.html"
+On branch stile
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)        
+  (use "git restore <file>..." to discard changes in working directory)        deleted:    stile.css
+
+no changes added to commit (use "git add" and/or "git commit -a")      
+PS C:\Users\acer4\github\esercizi_git> git log
+commit 8d6a06ca7542cd40bfe4ed636b36a2f4c2c89b22 (HEAD -> stile)        
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Thu Oct 31 00:37:17 2024 +0100
+
+    importo lo style.css in index.html
+
+commit c7eb23674f69ed47e78d6a42762a2edf656ff8af
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Thu Oct 31 00:33:51 2024 +0100
+
+    file CSS style.css
+
+commit ef57f69d97c42bcbfb5cb6d24de75b03975823ec (master)
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Wed Oct 30 23:55:29 2024 +0100
+
+    nuova commit
+PS C:\Users\acer4\github\esercizi_git> git checkout master
+Switched to branch 'master'
+PS C:\Users\acer4\github\esercizi_git> git merge stile
+Updating ef57f69..8d6a06c
+Fast-forward
+ index.html | 1 +
+ stile.css  | 0
+ style.css  | 3 +++
+ 3 files changed, 4 insertions(+)
+ create mode 100644 stile.css
+ create mode 100644 style.css
+PS C:\Users\acer4\github\esercizi_git> git log
+commit 8d6a06ca7542cd40bfe4ed636b36a2f4c2c89b22 (HEAD -> master, stile)
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Thu Oct 31 00:37:17 2024 +0100
+
+    importo lo style.css in index.html
+
+commit c7eb23674f69ed47e78d6a42762a2edf656ff8af
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Thu Oct 31 00:33:51 2024 +0100
+
+    file CSS style.css
+
+commit ef57f69d97c42bcbfb5cb6d24de75b03975823ec
+Author: natasciarufino <natasciarufino17@gmail.com>
+Date:   Wed Oct 30 23:55:29 2024 +0100
+
+    nuova commit
+PS C:\Users\acer4\github\esercizi_git> 
